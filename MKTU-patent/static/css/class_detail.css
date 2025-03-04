@@ -1,0 +1,258 @@
+/* Class Detail Styles */
+.class-detail {
+  padding: 20px;
+  /* height: 590px; */
+  overflow: auto;
+  width: auto;
+}
+
+.class-detail-header {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.class-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.class-header {
+  z-index: 1000;
+  position: sticky;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.class-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.action-button {
+  padding: 8px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-button:hover {
+  background-color: #f0f0f0;
+}
+
+.action-button img {
+  width: 16px;
+  height: 16px;
+}
+
+.class-content {
+  margin-top: 20px;
+  padding: 2rem;
+}
+
+.class-description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.class-items {
+  display: grid;
+  gap: 10px;
+}
+
+.class-item {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.item-code {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+
+.tool-button:hover {
+  background-color: #f0f0f0;
+}
+
+.tool-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Result item styles */
+.result-item {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.result-item:hover {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* Верхняя панель инструментов */
+.top-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar-left {
+  display: flex;
+  gap: 4px;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.toolbar-button:hover {
+  background-color: #f0f0f0;
+}
+
+.toolbar-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Панель действий с классом */
+.class-actions {
+  padding: 8px;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.action-button:hover {
+  background-color: #f0f0f0;
+}
+
+.action-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Содержимое класса */
+.class-content {
+  padding: 20px;
+}
+
+.class-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.class-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.class-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #333;
+  margin: 0;
+}
+
+.class-tags {
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+/* Селекты и дополнительные элементы */
+.translate-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.add-button {
+  padding: 4px 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .toolbar-button span,
+  .action-button span {
+    display: none;
+  }
+
+  .toolbar-button,
+  .action-button {
+    padding: 4px;
+  }
+
+  .class-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

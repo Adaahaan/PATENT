@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель</title>
+</head>
+<body>
+    <h1>Админ-панель</h1>
+
+    <form method="POST">
+        <input type="text" name="code" placeholder="Код" required>
+        <input type="text" name="name_ru" placeholder="Название" required>
+        <input type="text" name="name_en" placeholder="Название en" required>
+        <input type="text" name="name_fr" placeholder="Название fr" required>
+        <input type="text" name="name_ky" placeholder="Название ky" required>
+        <input type="text" name="class_code" placeholder="Класс" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h2>Термины</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.code }} - {{ item.name_ru }} (Класс: {{ item.class_code }})
+                <a href="{{ url_for('delete_item', id=item.id) }}">Удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

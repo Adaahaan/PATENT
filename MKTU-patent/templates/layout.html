@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>МКТУ Кыргыз патент</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- В секции head добавьте: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/class_detail.css') }}" />
+
+    <!-- Перед закрывающим тегом body добавьте: -->
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="header-right">
+        <div class="help-dropdown">
+            <button>Помощь</button>
+        </div>
+        <div class="language-dropdown">
+          <form id="translateForm" method="POST">
+            <select id="language" name="language">
+              <option value="ru">Русский</option>
+              <option value="ky">Кыргызский</option>
+              <option value="en">Английский</option>
+              <option value="fr">Французский</option>
+            </select>
+            <button type="submit">Перевести</button>
+          </form>
+        </div>
+        <a href="#" class="ip-portal-login">Вход в систему</a>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <button title="Импорт списка" class="toolbar-button">Импорт списка</button>
+        <a href="#" class="tool-button">Экспорт списка</a>
+        <a href="#" class="tool-button">Печать списка</a>
+        <button title="Удалить список" class="tool-button">Удалить список</button>
+        <a href="#" class="tool-button">Настройки отображения</a>
+      </div>
+      <div class="toolbar-right">
+
+        <select class="add-dropdown">
+          <option>Добавить класс</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <div class="tabs">
+          <button class="tab active" data-tab="browse">Просмотр</button>
+          <button class="tab" data-tab="search">Поиск</button>
+        </div>
+        <div id="browseContent" class="search-container">
+          <label for="classSelect">Выберите класс:</label>
+          <select id="classSelect" name="class"></select>
+
+          <label>
+            <input type="checkbox" id="niceCheckbox" />
+            Только Ницца
+          </label>
+          <div class="results-info">всего результатов <span id="browse-result-count">0</span></div>
+          <div class="results-container" id="browse-results"></div>
+        </div>
+        <div id="searchContent" class="search-container hidden">
+          <input type="text" class="search-input" placeholder="Поиск по классу..." />
+          <button class="search-button">🔍</button>
+          <label class="nice-only">
+            <input type="checkbox" class="nice-checkbox" /> Только Ницца
+          </label>
+
+          <div class="results-info">всего результатов <span id="search-result-count">0</span></div>
+          <div class="results-container" id="search-results"></div>
+        </div>
+      </aside>
+
+      {% block content %}{% endblock %}
+    </div>
+    <script src="/static/js/class_detail.js"></script>
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>
